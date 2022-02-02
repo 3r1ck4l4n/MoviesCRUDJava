@@ -5,6 +5,12 @@ public class Actor {
     public Actor() {
     }
 
+    public Actor(int id_actor, String name, String lastName) {
+        this.id_actor = id_actor;
+        this.name = name;
+        this.lastName = lastName;
+    }
+
     public Actor(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
@@ -37,4 +43,13 @@ public class Actor {
     private int id_actor;
     private String name;
     private String lastName;
+
+    @Override
+    public String toString() {
+        return "Actor{" +
+                "id_actor=" + id_actor +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }

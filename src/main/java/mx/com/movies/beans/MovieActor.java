@@ -1,7 +1,13 @@
 package mx.com.movies.beans;
 
 public class MovieActor{
+
+
     public MovieActor() {
+    }
+    public MovieActor(int id_actor, int id_movie) {
+        this.id_actor = id_actor;
+        this.id_movie = id_movie;
     }
 
     public MovieActor(int id_actor, int id_movie, Movie movie, Actor actor) {
@@ -27,11 +33,6 @@ public class MovieActor{
         this.actor = actor;
     }
 
-    public MovieActor(int id_actor, int id_movie) {
-        this.id_actor = id_actor;
-        this.id_movie = id_movie;
-    }
-
     public int getId_actor() {
         return id_actor;
     }
@@ -52,4 +53,14 @@ public class MovieActor{
     private int id_movie;
     private Movie movie;
     private Actor actor;
+
+    @Override
+    public String toString() {
+        return "MovieActor{" +
+                "id_actor=" + id_actor +
+                ", id_movie=" + id_movie +
+                ", movie=" + movie +
+                ", actor=" + actor +
+                '}';
+    }
 }
